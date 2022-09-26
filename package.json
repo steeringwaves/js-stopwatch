@@ -1,5 +1,5 @@
 {
-	"name": "js-stopwatch",
+	"name": "@steeringwaves/stopwatch",
 	"version": "1.0.0",
 	"description": "stopwatch library using process.hrtime",
 	"main": "dist/stopwatch.js",

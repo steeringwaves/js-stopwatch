@@ -27,7 +27,8 @@ module.exports = {
 
 	// An array of regexp pattern strings used to skip coverage collection
 	coveragePathIgnorePatterns: [
-		"/node_modules/"
+		"./node_modules/",
+		"./dist/"
 	],
 
 	// Indicates which provider should be used to instrument code for coverage
@@ -155,8 +156,6 @@ module.exports = {
 
 	// The glob patterns Jest uses to detect test files
 	testMatch: [
-		"**/Testing/**/__tests__/**/*.[jt]s?(x)",
-		"**/Testing/**/?(*.)+(spec|test).[tj]s?(x)",
 		"**/*.test.js"
 	]
 

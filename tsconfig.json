@@ -108,7 +108,8 @@
     // "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
   "exclude": [
-    ".git",
-    "node_modules",
+    ".git/",
+    "node_modules/",
+    "dist/"
   ]
 }

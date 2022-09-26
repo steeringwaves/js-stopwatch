@@ -1,7 +1,7 @@
 {
   "name": "js-stopwatch",
   "version": "1.0.0",
-  "description": "",
+  "description": "stopwatch library using process.hrtime",
   "main": "dist/stopwatch.js",
   "types": "dist/stopwatch.d.ts",
   "scripts": {

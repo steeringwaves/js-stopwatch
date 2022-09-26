@@ -6,20 +6,12 @@
 		"jquery": true,
 		"browser": true
 	},
-	"extends": [
-		"airbnb-base",
-		"prettier"
-	],
-	"plugins": [
-		"prettier"
-	],
+	"extends": ["airbnb-base", "prettier"],
+	"plugins": ["prettier"],
 	"parserOptions": {
 		"project": "tsconfig.json"
 	},
-	"ignorePatterns": [
-		"node_modules/",
-		"dist/"
-	],
+	"ignorePatterns": ["node_modules/", "dist/"],
 	"rules": {
 		"prettier/prettier": [
 			"error",
@@ -51,10 +43,7 @@
 		"no-lonely-if": "off",
 		"smart-tabs": "off",
 		"new-cap": "off",
-		"no-mixed-spaces-and-tabs": [
-			"error",
-			"smart-tabs"
-		],
+		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
 		"operator-linebreak": "off",
 		"keyword-spacing": [
 			"warn",
@@ -74,9 +63,7 @@
 				}
 			}
 		],
-		"no-bitwise": [
-			"warn"
-		],
+		"no-bitwise": ["warn"],
 		"comma-dangle": [
 			"error",
 			{
@@ -95,41 +82,17 @@
 		"prefer-promise-reject-errors": "warn",
 		"indent": "off",
 		"eqeqeq": "error",
-		"linebreak-style": [
-			"off"
-		],
-		"quotes": [
-			"off"
-		],
-		"semi": [
-			"error",
-			"always"
-		],
-		"no-unused-vars": [
-			"warn"
-		],
-		"no-var": [
-			"error"
-		],
-		"prefer-const": [
-			"warn"
-		],
-		"curly": [
-			"error"
-		],
-		"no-else-return": [
-			"warn"
-		],
-		"no-implicit-coercion": [
-			"warn"
-		],
-		"no-multi-spaces": [
-			"warn"
-		],
-		"comma-style": [
-			"warn",
-			"last"
-		],
+		"linebreak-style": ["off"],
+		"quotes": ["off"],
+		"semi": ["error", "always"],
+		"no-unused-vars": ["warn"],
+		"no-var": ["error"],
+		"prefer-const": ["warn"],
+		"curly": ["error"],
+		"no-else-return": ["warn"],
+		"no-implicit-coercion": ["warn"],
+		"no-multi-spaces": ["warn"],
+		"comma-style": ["warn", "last"],
 		"max-len": [
 			"off",
 			{
@@ -145,9 +108,7 @@
 				"onlyEquality": true
 			}
 		],
-		"implicit-arrow-linebreak": [
-			"off"
-		],
+		"implicit-arrow-linebreak": ["off"],
 		"no-continue": "off",
 		"no-constant-condition": [
 			"error",
@@ -155,19 +116,12 @@
 				"checkLoops": false
 			}
 		],
-		"import/no-extraneous-dependencies": [
-			"off"
-		]
+		"import/no-extraneous-dependencies": ["off"]
 	},
 	"overrides": [
 		{
-			"files": [
-				"*.ts",
-				"*.tsx"
-			],
-			"extends": [
-				"airbnb-typescript/base"
-			],
+			"files": ["*.ts", "*.tsx"],
+			"extends": ["airbnb-typescript/base"],
 			"rules": {
 				"@typescript-eslint/no-underscore-dangle": "off",
 				"@typescript-eslint/no-tabs": "off",
@@ -203,16 +157,9 @@
 				],
 				"@typescript-eslint/prefer-destructuring": "off",
 				"@typescript-eslint/indent": "off",
-				"@typescript-eslint/quotes": [
-					"off"
-				],
-				"@typescript-eslint/semi": [
-					"error",
-					"always"
-				],
-				"@typescript-eslint/no-unused-vars": [
-					"warn"
-				],
+				"@typescript-eslint/quotes": ["off"],
+				"@typescript-eslint/semi": ["error", "always"],
+				"@typescript-eslint/no-unused-vars": ["warn"],
 				"@typescript-eslint/max-len": [
 					"off",
 					{
@@ -232,20 +179,11 @@
 		}
 	],
 	"settings": {
-		"import/external-module-folders": [
-			"./"
-		],
+		"import/external-module-folders": ["./"],
 		"import/resolver": {
 			"node": {
-				"extensions": [
-					".js",
-					".jsx",
-					".ts",
-					".tsx"
-				],
-				"moduleDirectory": [
-					"./"
-				]
+				"extensions": [".js", ".jsx", ".ts", ".tsx"],
+				"moduleDirectory": ["./"]
 			}
 		}
 	}

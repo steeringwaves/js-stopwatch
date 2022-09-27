@@ -1,5 +1,7 @@
 # js-stopwatch
 
+![workflow](https://github.com/github/docs/actions/workflows/test.yml/badge.svg)
+
 A node utility to help keep track of time.
 
 ## Example

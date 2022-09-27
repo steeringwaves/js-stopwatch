@@ -19,5 +19,4 @@ stopwatch.on(Stopwatch.EVENTS.EXPIRED, (when) => {
 setInterval(() => {
 	console.log("stopwatch time:", stopwatch.Get());
 }, 1000);
-
 ```

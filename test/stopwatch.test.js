@@ -1,9 +1,9 @@
-/* eslint-env node,mocha,jest */
+/* eslint-env node,jest */
 /* eslint-disable no-unused-vars */
 
 /* eslint-enable no-unused-vars */
 
-const { Stopwatch } = require("../stopwatch");
+const { Stopwatch } = require("../stopwatch.ts");
 
 describe("Stopwatch", () => {
 	beforeAll(() => {

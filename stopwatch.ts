@@ -1,6 +1,5 @@
-const { hrtime } = require("node:process");
-const _ = require("lodash");
-const EventEmitter = require("events");
+import * as _ from "lodash";
+import { EventEmitter } from "events";
 
 export interface StopwatchConfig {
 	Timeout?: number;
@@ -22,7 +21,7 @@ interface Events {
 // }
 
 export class Stopwatch extends EventEmitter {
-	private _expiredTimeout: NodeJS.Timeout | undefined = undefined;
+	private _expiredTimeout: ReturnType<typeof setTimeout> | undefined = undefined;
 
 	private _running: boolean = false;
 
@@ -60,12 +59,12 @@ export class Stopwatch extends EventEmitter {
 		};
 	}
 
-	Init(timeout: number) {
+	public Init(timeout: number): void {
 		this._timeout = timeout;
 		this.Reset();
 	}
 
-	Reset() {
+	public Reset(): void {
 		if (this._expiredTimeout) {
 			clearTimeout(this._expiredTimeout);
 			this._expiredTimeout = undefined;
@@ -79,7 +78,7 @@ export class Stopwatch extends EventEmitter {
 		this.emit(Stopwatch.EVENTS.RESET, 0, when);
 	}
 
-	Start() {
+	public Start(): void {
 		if (false === this._running) {
 			if (this._expiredTimeout) {
 				clearTimeout(this._expiredTimeout);
@@ -110,7 +109,7 @@ export class Stopwatch extends EventEmitter {
 		}
 	}
 
-	Stop() {
+	public Stop(): void {
 		if (this._expiredTimeout) {
 			clearTimeout(this._expiredTimeout);
 			this._expiredTimeout = undefined;
@@ -123,12 +122,12 @@ export class Stopwatch extends EventEmitter {
 		this.emit(Stopwatch.EVENTS.STOPPED, when);
 	}
 
-	Restart() {
+	public Restart(): void {
 		this.Reset();
 		this.Start();
 	}
 
-	Get(): number {
+	public Get(): number {
 		if (this._hrtime && true === this._running) {
 			const hrdiff: [number, number] = process.hrtime(this._hrtime);
 			return this._elapsed + (hrdiff[0] * 1000 + hrdiff[1] / 1e6);
